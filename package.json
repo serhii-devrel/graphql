@@ -1,0 +1,43 @@
+{
+  "name": "vue-graphql",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.1.0",
+    "@apollo/client": "^3.6.9",
+    "@rollup/plugin-graphql": "^1.1.0",
+    "@vue/apollo-composable": "4.0.0-alpha.15",
+    "ant-design-vue": "^3.2.12",
+    "core-js": "^3.6.5",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.19",
+    "@vue/cli-plugin-eslint": "~4.5.19",
+    "@vue/cli-plugin-unit-jest": "~4.5.19",
+    "@vue/cli-service": "~4.5.19",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^2.1.0",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^10.10.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "~3.9.3",
+    "vue-jest": "^5.0.0-0"
+  }
+}

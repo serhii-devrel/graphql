@@ -30,10 +30,15 @@ import EditBook from './views/EditBook.vue';
 import Books from './views/Books.vue';
 import Search from './shared/Search.vue';
 import useBooksQuery from './composables/useBooksQuery';
+import { captureEvent } from '@sentry/browser';
 
 export default {
   name: 'App',
   components: { Books, EditBook, Search },
+
+  beforeUpdate() {
+    captureEvent('Will update DOM');
+  },
 
   setup() {
     const pattern = ref('');

@@ -16,6 +16,7 @@
     "@ant-design/icons-vue": "^6.1.0",
     "@apollo/client": "^3.6.9",
     "@rollup/plugin-graphql": "^1.1.0",
+    "@sentry/browser": "^7.54.0",
     "@vue/apollo-composable": "4.0.0-alpha.15",
     "ant-design-vue": "^3.2.12",
     "core-js": "^3.6.5",

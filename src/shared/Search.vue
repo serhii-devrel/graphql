@@ -1,7 +1,7 @@
 <template>
-  <div class="search">
+  <div role="widget" class="search">
     <TypographyTitle :level="2">Search: </TypographyTitle>
-    <Input @input="updateValue($event.target.value)" />
+    <Input role="search" @input="updateValue($event.target.value)" />
     <TypographyText type="secondary"
       >start typing to see results...</TypographyText
     >

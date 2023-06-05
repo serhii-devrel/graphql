@@ -1,10 +1,12 @@
 <template>
-  <div class="books">
+  <div role="main" class="books">
     <div class="empty-books-list" v-if="!loading && !booksLength">
       <TypographyTitle :level="4">Nothing to show</TypographyTitle>
     </div>
     <div class="loader" v-else-if="loading">
-      <TypographyTitle :level="2">Loading content...</TypographyTitle>
+      <TypographyTitle role="status" :level="2"
+        >Loading content...</TypographyTitle
+      >
     </div>
     <div class="books-content" v-else>
       <div class="books-title">
@@ -21,7 +23,11 @@
               class="books-actions__edit"
               @click="$emit('editBook', book.id)"
             >
-              <EditOutlined key="edit" />
+              <EditOutlined
+                role="figure"
+                aria-labelledby="edit button"
+                key="edit"
+              />
             </div>
           </template>
         </Card>
@@ -31,16 +37,16 @@
 </template>
 
 <script>
-import { computed } from "vue";
-import { Card, Rate, TypographyTitle } from "ant-design-vue";
-import { EditOutlined } from "@ant-design/icons-vue";
+import { computed } from 'vue';
+import { Card, Rate, TypographyTitle } from 'ant-design-vue';
+import { EditOutlined } from '@ant-design/icons-vue';
 
 export default {
   props: {
     books: { type: Object, required: true },
     loading: { type: Boolean, required: true },
   },
-  name: "Books",
+  name: 'Books',
   components: { Card, Rate, EditOutlined, TypographyTitle },
 
   setup(props) {

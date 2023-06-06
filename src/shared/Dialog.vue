@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import { Modal } from 'ant-design-vue';
+import { Modal } from "ant-design-vue";
 
 export default {
-  name: 'Dialog',
+  name: "Dialog",
   components: { Modal },
 };
 </script>

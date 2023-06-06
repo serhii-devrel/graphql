@@ -10,6 +10,7 @@ import graphql from '@rollup/plugin-graphql';
 import 'ant-design-vue/dist/antd.css';
 import Antd from 'ant-design-vue';
 import App from './App.vue';
+import LifePlugin from './instruments/Life.plugin.vue';
 
 Sentry.init({
   dsn: 'public',
@@ -50,8 +51,11 @@ const app = createApp({
   render: () => h(App),
 });
 
+export let openRequest = indexedDB.open('store', 1);
+
 app.use(graphql);
 app.use(Antd);
+app.use(LifePlugin);
 
 // Mounting
 app.mount('#app');

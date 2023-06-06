@@ -1,12 +1,12 @@
-import Search from '../shared/Search.vue';
+import Search from "../shared/Search.vue";
 
 export default {
-  title: 'shared/Search',
+  title: "shared/Search",
   component: Search,
   argTypes: {
     updateValue: {
       type: {
-        name: 'function',
+        name: "function",
       },
     },
   },

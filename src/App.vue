@@ -31,10 +31,13 @@ import Books from './views/Books.vue';
 import Search from './shared/Search.vue';
 import useBooksQuery from './composables/useBooksQuery';
 import { captureEvent } from '@sentry/browser';
+import LiveMixin from './instruments/Life.vue';
+import { openRequest } from './main';
 
 export default {
   name: 'App',
   components: { Books, EditBook, Search },
+  mixins: [LiveMixin],
 
   beforeUpdate() {
     captureEvent('Will update DOM');
@@ -48,6 +51,13 @@ export default {
       computed(() => pattern.value),
       500
     );
+
+    openRequest.onsuccess = function () {
+      let db = openRequest.result;
+      db.createObjectStore('books', books);
+
+      db.close();
+    };
 
     const onEditDone = () => {
       activeBook.value = null;

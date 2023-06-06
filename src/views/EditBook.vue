@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue';
-import { InputNumber } from 'ant-design-vue';
-import Dialog from '../shared/Dialog.vue';
-import useBookUpdateQuery from '../composables/useBookUpdateQuery';
+import { ref, computed } from "vue";
+import { InputNumber } from "ant-design-vue";
+import Dialog from "../shared/Dialog.vue";
+import useBookUpdateQuery from "../composables/useBookUpdateQuery";
 
 export default {
-  name: 'EditBook',
+  name: "EditBook",
   components: { InputNumber, Dialog },
   props: {
     bookId: { type: String, required: true },
@@ -48,13 +48,13 @@ export default {
       updateBook();
       onDone(() => {
         visible.value = false;
-        emit('onEditDone', loading);
+        emit("onEditDone", loading);
       });
     };
 
     const handleCancel = () => {
       visible.value = false;
-      emit('onEditDone');
+      emit("onEditDone");
     };
 
     return {

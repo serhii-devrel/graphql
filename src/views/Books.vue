@@ -37,16 +37,16 @@
 </template>
 
 <script>
-import { computed } from 'vue';
-import { Card, Rate, TypographyTitle } from 'ant-design-vue';
-import { EditOutlined } from '@ant-design/icons-vue';
+import { computed } from "vue";
+import { Card, Rate, TypographyTitle } from "ant-design-vue";
+import { EditOutlined } from "@ant-design/icons-vue";
 
 export default {
   props: {
     books: { type: Object, required: true },
     loading: { type: Boolean, required: true },
   },
-  name: 'Books',
+  name: "Books",
   components: { Card, Rate, EditOutlined, TypographyTitle },
 
   setup(props) {

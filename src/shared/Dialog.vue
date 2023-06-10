@@ -1,5 +1,5 @@
 <template>
-  <Modal role="window" v-bind="$attrs" :visible="true">
+  <Modal v-bind="$attrs" :visible="true">
     <div class="dialog">
       <slot role="main" name="content"></slot>
     </div>
